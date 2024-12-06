@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <title>Luxury Watch Auction</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Your CSS files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components/topbar.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/carousel.css">
+    <link rel="stylesheet" href="css/components/auction.css">
+    <link rel="stylesheet" href="css/components/animations.css">
+    <link rel="stylesheet" href="css/components/categories.css">
+    <link rel="stylesheet" href="css/components/faq.css">
+    <link rel="stylesheet" href="css/components/news.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/sections.css">
+    <link rel="stylesheet" href="css/components/sales.css">
+    <link rel="stylesheet" href="css/components/global.css">
+    <link rel="stylesheet" href="css/components/interactive-boxes.css">
+    <link rel="stylesheet" href="css/components/live-auction.css">
+    <link rel="stylesheet" href="css/components/live-auction.css">
+    <link rel="stylesheet" href="css/components/separator-banner.css">
+    <link rel="stylesheet" href="css/components/live-categories.css">
+    <link rel="stylesheet" href="css/components/past-results.css">
+    <link rel="stylesheet" href="css/components/about-section.css">
+    <link rel="stylesheet" href="css/components/faq-section.css">
+    <link rel="stylesheet" href="css/components/latest-news.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/components/interactive-effects.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+
+    
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #004d45;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" as="style" href="css/main.css">
+    <link rel="preload" as="script" href="js/main.js">
+
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="left-links">
+            <div class="top-bar-item">
+                <a href="#" class="dropdown-toggle">
+                    <i class="fas fa-headset"></i>
+                    <span>Customer Support</span>
+                </a>
+            </div>
+            
+            <div class="top-bar-item">
+                <div class="dropdown-toggle" id="languageDropdown">
+                    <i class="fas fa-globe"></i>
+                    <span id="currentLanguage">English</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="dropdown-menu" id="languageMenu">
+                    <a href="#" class="dropdown-item" data-lang="en">
+                       
+                        <span>English</span>
+                    </a>
+                    <a href="#" class="dropdown-item" data-lang="es">
+                        
+                        <span>Spanish</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="top-bar-item">
+                <div class="dropdown-toggle" id="currencyDropdown">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>USD</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="dropdown-menu" id="currencyMenu">
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>USD</span>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-euro-sign"></i>
+                        <span>EUR</span>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-pound-sign"></i>
+                        <span>GBP</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-links">
+            <a href="login.html" class="login-btn">
+                <i class="fas fa-user"></i>
+                <span>Login</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Header with updated navigation links -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="Site Logo">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <a href="#live-sales" class="nav-link" data-translate="live-sales">Live Sales</a>
+                    <a href="#live-auction" class="nav-link">Live Auctions</a>
+                    <a href="#past-results" class="nav-link">Past Results</a>
+                    <a href="#about-section" class="nav-link">About Us</a>
+                    <a href="#faq-section" class="nav-link">FAQ</a>
+                </nav>
+            </div>
+        </div>
+         <!-- Mobile Hamburger -->
+    <div class="nav-mobile">
+        <button class="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <!-- Mobile Slide Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <button class="close-menu">×</button>
+        </div>
+        <div class="mobile-menu-items">
+            <a href="#live-sales">Live Sales</a>
+            <a href="#live-auctions">Live Auctions</a>
+            <a href="#past-results">Past Results</a>
+            <a href="#about-us">About Us</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </div>
+</nav>
+    </header>
+
+    <!-- Live Sales Section -->
+    <section class="live-sales section">
+        <div class="container">
+            <div class="live-sales-header">
+                <h2 class="section-title">Live Sales</h2>
+            </div>
+           
+            <div class="sales-container">
+                <div class="sales-scroll">
+                    <!-- First Item -->
+                    <a href="product1.html" class="sales-item">
+                        <img src="assets/images/watch1.jpg" alt="Watch 1">
+                        <div class="sales-info">
+                            <div class="auction-timer">
+                                <div class="timer-box">
+                                    <span class="time-value" data-days>02</span>
+                                    <span class="time-label">Days</span>
+                                </div>
+                                <div class="timer-box">
+                                    <span class="time-value" data-hours>18</span>
+                                    <span class="time-label">Hrs</span>
+                                </div>
+                                <div class="timer-box">
+                                    <span class="time-value" data-minutes>45</span>
+                                    <span class="time-label">Min</span>
+                                </div>
+                                <div class="timer-box">
+                                    <span class="time-value" data-seconds>30</span>
+                                    <span class="time-label">Sec</span>
+                                </div>
+                            </div>
+                            <h3>Rolex Submariner</h3>
+                            <div class="bid-info-group">
+                                <p class="current-bid">Current Bid</p>
+                                <p class="price">$12,000</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Repeat for other items with different watches and prices -->
+                    <!-- Second Item -->
+                    <a href="product2.html" class="sales-item">
+                        <img src="assets/images/watch1.jpg" alt="Watch 2">
+                        <div class="sales-info">
+                            <div class="auction-timer">
+                                <div class="timer-box">
+                                    <span class="time-value" data-days>03</span>
+                                    <span class="time-label">Days</span>
+                                </div>
+                                <div class="timer-box">
+                                    <span class="time-value" data-hours>12</span>
+                                    <span class="time-label">Hrs</span>
+                                </div>
+                                <div class="timer-box">
+                                    <span class="time-value" data-minutes>30</span>
+                                    <span class="time-label">Min</span>
+                                </div>
+                                <div class="timer-box">
+                                    <span class="time-value" data-seconds>15</span>
+                                    <span class="time-label">Sec</span>
+                                </div>
+                            </div>
+                            <h3>Omega Seamaster</h3>
+                            <div class="bid-info-group">
+                                <p class="current-bid">Current Bid</p>
+                                <p class="price">$9,500</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Continue with remaining items -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Box Section -->
+    <section class="interactive-boxes">
+        <div class="box-container">
+            <div class="box" style="background-image: url('assets/images/banner.png');"></div>
+            <div class="box" style="background-image: url('assets/images/banner.png');"></div>
+            <div class="box" style="background-image: url('assets/images/banner.png');"></div>
+        </div>
+        <div class="dot-indicators">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- Live Auction Section -->
+    <section id="live-auction" class="live-auction scroll-fade-in">
+        <h2 class="section-title" data-translate="section-title-live-auction">Live Auction</h2>
+        
+        <div class="auction-container">
+            <!-- First Box -->
+            <div class="auction-box">
+                <div class="auction-image">
+                    <img src="assets/images/watch.jpg" alt="Luxury Watch">
+                </div>
+                <div class="auction-details">
+                    <h3>Rolex Daytona</h3>
+                    <div class="bid-info">
+                        <span class="current-bid">Current Bid: $45,000</span>
+                        <div class="time-remaining">
+                            <i class="fas fa-clock"></i>
+                            <span>2h 45m</span>
+                        </div>
+                    </div>
+                    <button class="bid-button" data-translate="bid-now">Bid Now</button>
+                </div>
+            </div>
+
+            <!-- Second Box -->
+            <div class="auction-box">
+                <div class="auction-image">
+                    <img src="assets/images/watch.jpg" alt="Luxury Watch">
+                </div>
+                <div class="auction-details">
+                    <h3>Patek Philippe Nautilus</h3>
+                    <div class="bid-info">
+                        <span class="current-bid">Current Bid: $85,000</span>
+                        <div class="time-remaining">
+                            <i class="fas fa-clock"></i>
+                            <span>4h 30m</span>
+                        </div>
+                    </div>
+                    <button class="bid-button" data-translate="bid-now">Bid Now</button>
+                </div>
+            </div>
+
+            <!-- Third Box -->
+            <div class="auction-box">
+                <div class="auction-image">
+                    <img src="assets/images/watch.jpg" alt="Luxury Watch">
+                </div>
+                <div class="auction-details">
+                    <h3>Audemars Piguet Royal Oak</h3>
+                    <div class="bid-info">
+                        <span class="current-bid">Current Bid: $65,000</span>
+                        <div class="time-remaining">
+                            <i class="fas fa-clock"></i>
+                            <span>1h 15m</span>
+                        </div>
+                    </div>
+                    <button class="bid-button" data-translate="bid-now">Bid Now</button>
+                </div>
+            </div>
+
+            <!-- Fourth Box -->
+            <div class="auction-box">
+                <div class="auction-image">
+                    <img src="assets/images/watch.jpg" alt="Luxury Watch">
+                </div>
+                <div class="auction-details">
+                    <h3>Vacheron Constantin</h3>
+                    <div class="bid-info">
+                        <span class="current-bid">Current Bid: $55,000</span>
+                        <div class="time-remaining">
+                            <i class="fas fa-clock"></i>
+                            <span>3h 20m</span>
+                        </div>
+                    </div>
+                    <button class="bid-button" data-translate="bid-now">Bid Now</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Discover More Button -->
+        <div class="discover-more-container">
+            <button class="discover-more-btn" data-translate="discover-more">Discover More</button>
+        </div>
+    </section>
+
+    <!-- Separator Banner Section -->
+    <section class="separator-banner">
+        <div class="banner-wrapper">
+            <img src="assets/images/separator.png" alt="Separator Banner" class="banner-image">
+            <div class="banner-overlay"></div>
+        </div>
+    </section>
+
+    <!-- Live Categories Section -->
+    <section class="live-categories">
+        <h2 class="categories-title">Live Categories</h2>
+        <p class="categories-subtitle">Explore rare and collectible fine watches</p>
+        
+        <div class="categories-grid">
+            <a href="/category/dive" class="category-circle">
+                <div class="circle-background">
+                    <img src="assets/images/watch2.png" alt="Dive Watches">
+                </div>
+                <div class="category-name">
+                    <span>Dive</span>
+                    <span>Watches</span>
+                </div>
+            </a>
+
+            <a href="/category/chronograph" class="category-circle">
+                <div class="circle-background">
+                    <img src="assets/images/watch2.png" alt="Chronograph Watches">
+                </div>
+                <div class="category-name">
+                    <span>Chronograph</span>
+                    <span>Watches</span>
+                </div>
+            </a>
+
+            <a href="/category/dress" class="category-circle">
+                <div class="circle-background">
+                    <img src="assets/images/watch2.png" alt="Dress Watches">
+                </div>
+                <div class="category-name">
+                    <span>Dress</span>
+                    <span>Watches</span>
+                </div>
+            </a>
+
+            <a href="/category/digital" class="category-circle">
+                <div class="circle-background">
+                    <img src="assets/images/watch2.png" alt="Digital Watches">
+                </div>
+                <div class="category-name">
+                    <span>Digital</span>
+                    <span>Watches</span>
+                </div>
+            </a>
+
+            <a href="/category/gmt" class="category-circle">
+                <div class="circle-background">
+                    <img src="assets/images/watch2.png" alt="GMT Watches">
+                </div>
+                <div class="category-name">
+                    <span>GMT</span>
+                    <span>Watches</span>
+                </div>
+            </a>
+
+            <a href="/category/pilot" class="category-circle">
+                <div class="circle-background">
+                    <img src="assets/images/watch2.png" alt="Pilot Watches">
+                </div>
+                <div class="category-name">
+                    <span>Pilot</span>
+                    <span>Watches</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Past Results Section -->
+    <section id="past-results" class="past-results scroll-fade-in">
+        <h2 class="section-title">Past Results</h2>
+        <p class="section-subtitle">Previous Transactions to provide you with market insights</p>
+        
+        <div class="results-container">
+            <!-- First Box -->
+            <div class="result-box">
+                <div class="result-image">
+                    <img src="assets/images/watch1.jpg" alt="Sold Watch">
+                    <div class="sold-tag">Sold</div>
+                </div>
+                <div class="result-details">
+                    <p>Sold for $700</p>
+                </div>
+            </div>
+
+            <!-- Second Box -->
+            <div class="result-box">
+                <div class="result-image">
+                    <img src="assets/images/watch1.jpg" alt="Sold Watch">
+                    <div class="sold-tag">Sold</div>
+                </div>
+                <div class="result-details">
+                    <span></span>Sold for</span>
+                    <span>
+                        $850</span>
+                </div>
+            </div>
+
+            <!-- Third Box -->
+            <div class="result-box">
+                <div class="result-image">
+                    <img src="assets/images/watch1.jpg" alt="Sold Watch">
+                    <div class="sold-tag">Sold</div>
+                </div>
+                <div class="result-details">
+                    <p>Sold for $1,200</p>
+                </div>
+            </div>
+
+            <!-- Fourth Box -->
+            <div class="result-box">
+                <div class="result-image">
+                    <img src="assets/images/watch1.jpg" alt="Sold Watch">
+                    <div class="sold-tag">Sold</div>
+                </div>
+                <div class="result-details">
+                    <p>Sold for $950</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- View All Button -->
+        <div class="view-all-container">
+            <button class="view-all-btn" data-translate="view-all">View All</button>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-section" class="about-section scroll-fade-in">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-container">
+            <!-- Left Side: Image -->
+            <div class="about-image">
+                <img src="assets/images/watch2.png" alt="Watch Image">
+            </div>
+            
+            <!-- Right Side: Text and Button -->
+            <div class="about-text">
+                <p>
+                    Welcome to RK Auction, your premier destination for discovering and acquiring rare and collectible fine watches. Our platform offers a seamless and engaging experience for watch enthusiasts and collectors alike. With a commitment to transparency and excellence, we provide detailed insights into each transaction, ensuring you make informed decisions. Join us in exploring the world of horological wonders and elevate your collection with our curated selection of timepieces.
+                </p>
+                <button class="explore-now-btn" onclick="window.location.href='/about-me'">Explore Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq-section" class="faq-section scroll-fade-in">
+        <h2 class="section-title">FAQ</h2>
+        <p class="section-subtitle">Explore Rare and Collectible Fine Watches</p>
+        
+        <div class="faq-container">
+            <!-- First FAQ Box -->
+            <div class="faq-box">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <h3>What is RK Auction?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>RK Auction is a premier online platform dedicated to luxury watch auctions. We specialize in rare, vintage, and collectible timepieces from renowned brands worldwide. Our platform provides a secure and transparent environment for buyers and sellers to trade exceptional watches. With years of experience in the industry, we ensure authenticity and quality for every transaction.</p>
+                </div>
+            </div>
+
+            <!-- Second FAQ Box -->
+            <div class="faq-box">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <h3>How do I participate in an auction?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Participating in our auctions is simple! First, create an account on our platform. Once registered, you can browse active auctions, place bids, and track your favorite items. We recommend setting up your payment method in advance. All bids are binding, and winning bidders will be notified immediately after the auction closes. Our customer service team is available 24/7 to assist with any questions during the bidding process.</p>
+                </div>
+            </div>
+
+            <!-- Third FAQ Box -->
+            <div class="faq-box">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <h3>What payment methods are accepted?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>We accept a wide range of payment methods to ensure convenient transactions for our global clientele. This includes major credit cards (Visa, MasterCard, American Express), PayPal, bank wire transfers, and cryptocurrency. All payments are processed through secure channels, and we offer buyer protection for every purchase. For high-value transactions, we can also arrange escrow services upon request.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="latest-news scroll-fade-in">
+        <h2 class="section-title">Latest News</h2>
+        <p class="section-subtitle">Stay Tuned with Market Updates</p>
+        
+        <div class="news-container">
+            <!-- Large Blog Post -->
+            <a href="/blog/1" class="blog-post large">
+                <div class="blog-image">
+                    <img src="assets/images/watch1.jpg" alt="Latest Watch Trends">
+                    <div class="blog-overlay">
+                        <h3>The Rise of Vintage Watches in 2024</h3>
+                        <p>Exploring the growing market for vintage timepieces</p>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Right Side Small Posts -->
+            <div class="small-posts">
+                <a href="/blog/2" class="blog-post small">
+                    <div class="blog-image">
+                        <img src="assets/images/watch2.jpg" alt="Investment Guide">
+                        <div class="blog-overlay">
+                            <h3>Watch Investment Guide</h3>
+                            <p>Smart investing in luxury timepieces</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/blog/3" class="blog-post small">
+                    <div class="blog-image">
+                        <img src="assets/images/watch1.jpg" alt="Market Analysis">
+                        <div class="blog-overlay">
+                            <h3>Market Analysis Q1 2024</h3>
+                            <p>Latest trends and market insights</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Image Section -->
+    <section class="image-banner">
+        <div class="banner-container">
+            <!-- Image removed -->
+        </div>
+    </section>
+
+    
+
+   
+
+    
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Left Side -->
+            <div class="footer-brand">
+                <img src="assets/images/logo.png" alt="RK Auction Logo" class="footer-logo">
+                <p class="footer-tagline">Everything starts at zero</p>
+            </div>
+
+            <!-- Right Side -->
+            <div class="footer-links">
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <div class="golden-line"></div>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#account">My Account</a></li>
+                        <li><a href="#live-auction">Live Auction</a></li>
+                        <li><a href="#calendar">Auction Calendar</a></li>
+                        <li><a href="#guide">Guide</a></li>
+                    </ul>
+                </div>
+
+                <!-- Help & FAQ -->
+                <div class="footer-column">
+                    <h3 class="footer-heading">Help & FAQ</h3>
+                    <div class="golden-line"></div>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#how-to-bid">How to Bid</a></li>
+                        <li><a href="#terms">Trade Terms</a></li>
+                        <li><a href="#conditions">Conditions</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#disclaimer">Disclaimer</a></li>
+                        <li><a href="#facts">Facts</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h3 class="footer-heading">Contact</h3>
+                    <div class="golden-line"></div>
+                    <ul class="social-links">
+                        <li><a href="#whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                        <li><a href="#facebook"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:contact@rkauction.com"><i class="far fa-envelope"></i> Gmail</a></li>
+                        <li><a href="tel:+1234567890"><i class="fas fa-phone"></i> +123 456 7890</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Line -->
+        <div class="footer-bottom">
+            <div class="golden-line-full"></div>
+            <p class="copyright">Copyrighted © RK Auction 2024. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/components/carousel.js"></script>
+    <script src="js/components/auction.js"></script>
+    <script src="js/components/faq.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/components/dropdown.js"></script>
+    <script src="js/components/sales.js"></script>
+    <script src="js/components/scroll.js"></script>
+    <script src="js/components/banner-carousel.js"></script>
+    <script src="js/components/interactive-boxes.js"></script>
+    <script src="js/components/faq-section.js"></script>
+    <script src="js/components/language-switcher.js"></script>
+    <script src="js/components/scroll-animation.js"></script>
+    <script src="js/components/interactive-effects.js"></script>
+    <script src="js/navigation.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+
+            fadeInElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+    <style>
+        button {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #D4AF37;
+            transform: translateY(-3px);
+        }
+    </style>
+
+</body>
+</html>

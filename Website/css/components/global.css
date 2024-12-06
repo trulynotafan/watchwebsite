@@ -1,0 +1,36 @@
+body {
+    background-color: #f6f6f6; /* Set the background color */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Example font */
+    color: #333; /* Example text color */
+} 
+
+/* Base responsive rules */
+:root {
+    --container-padding: 20px;
+    --container-width: 1200px;
+}
+
+/* Container responsiveness */
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    p { font-size: 1rem; }
+}
+
+/* Hide scrollbar on mobile */
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+} 

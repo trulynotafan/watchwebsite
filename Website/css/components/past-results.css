@@ -1,0 +1,113 @@
+.past-results {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-title {
+    color: #004d45; /* Same green color */
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.section-subtitle {
+    color: #000000;
+    font-size: 1.2em;
+    margin-bottom: 50px;
+}
+
+.results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.result-box {
+    background: white;
+    border-radius: 10px;
+    border: 2px solid #004d45;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.result-box:hover {
+    transform: translateY(-5px);
+    border-color: #D4AF37;
+}
+
+.result-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.result-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sold-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.result-details {
+    padding: 20px;
+    font-size: 1.1em;
+    color: #004d45;
+    font-weight: bold;
+}
+
+.view-all-container {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+.view-all-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    background: linear-gradient(90deg, #004d45 0%, #006d63 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 10px rgba(0, 77, 69, 0.15);
+}
+
+.view-all-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 77, 69, 0.25);
+    background: linear-gradient(90deg, #004d45 0%, #007f73 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .results-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .results-container {
+        grid-template-columns: 1fr;
+    }
+} 

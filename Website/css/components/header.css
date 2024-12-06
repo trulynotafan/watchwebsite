@@ -1,0 +1,117 @@
+/* Add this at the top of your header.css file */
+html {
+    scroll-behavior: smooth;
+}
+
+.main-header {
+    background: #f6f6f6;
+    padding: 10px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    margin-right: 50px;
+}
+
+.logo a {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo a:hover {
+    transform: scale(1.05);
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.nav-link {
+    color: #002925;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #D4AF37; /* Golden underline */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-link:hover {
+    color: #D4AF37;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo {
+        margin: 0 0 20px 0;
+    }
+    
+    .main-nav {
+        gap: 15px;
+    }
+} 
+
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .main-nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-link {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,640 @@
+.live-sales {
+    padding: 0;
+    background-color: transparent;
+}
+
+.container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.sales-section-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1em;
+    color: #000;
+    margin: 0;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.sales-carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+.sales-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 20s linear infinite;
+}
+
+.sales-item {
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: flex;
+    height: 180px;
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0f0f0;
+}
+
+.sales-item img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.sales-info {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sales-info h3 {
+    font-size: 0.95em;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.sales-info h3::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #D4AF37;
+    margin: 3px 0;
+}
+
+.sales-info p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #000;
+}
+
+.sales-info p.current-bid {
+    font-size: 0.85em;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.sales-info p.price {
+    font-size: 0.9em;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.sales-item:hover {
+    transform: translateY(-5px);
+}
+
+.sales-container {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+    width: 100%;
+}
+
+
+.sales-scroll {
+    display: flex;
+    gap: 20px;
+    padding: 5px 0;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    animation: scroll 30s linear infinite;
+}
+
+.sales-scroll:active {
+    cursor: grabbing;
+}
+
+.sales-scroll:hover {
+    animation-play-state: paused;
+}
+
+/* Update animation keyframes */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* This will make it loop smoothly */
+    }
+}
+
+/* Hide scrollbars but keep functionality */
+.sales-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.sales-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.sales-item {
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: flex;
+    height: 200px;
+    width: 500px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0f0f0;
+    flex-shrink: 0;
+}
+
+.sales-item img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.sales-info {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.sales-info h3 {
+    color: #000;
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.sales-info h3::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #D4AF37;
+    margin: 8px 0;
+}
+
+.sales-info p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #000;
+}
+
+.sales-info p.current-bid {
+    color: #004d45;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.sales-info p.price {
+    font-weight: 700;
+}
+
+.sales-item:hover {
+    transform: translateY(-5px);
+}
+
+.sales-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.sales-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.sales-container::-webkit-scrollbar-thumb {
+    background: #004d45;
+    border-radius: 4px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-500px * 5 - 25px * 5));
+    }
+}
+
+@media (max-width: 768px) {
+    .sales-item {
+        width: 300px;
+        height: 150px;
+    }
+
+    .sales-item img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .sales-info {
+        padding: 10px 15px;
+    }
+
+    .sales-info h3 {
+        font-size: 1.1em;
+    }
+
+    .sales-info p {
+        font-size: 1em;
+    }
+}
+
+.live-sales.section {
+    padding: 25px 0;
+}
+
+.live-sales .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-left: 0;
+}
+
+.live-sales-header {
+    flex: 0 0 120px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.live-sales-header::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 1px;
+    background: linear-gradient(to bottom, 
+        transparent,
+        #004d45,
+        transparent
+    );
+}
+
+.section-title {
+    font-size: 1em;
+    color: #000;
+    margin: 0;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.sales-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.sales-scroll {
+    display: flex;
+    gap: 20px;
+    animation: scroll 30s linear infinite;
+    padding: 5px 0;
+}
+
+.sales-scroll:hover {
+    animation-play-state: paused;
+}
+
+.sales-item {
+    height: 140px;
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    border: 2px solid #004d45;
+    transition: all 0.3s ease;
+}
+
+.sales-item img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.sales-info {
+    padding: 12px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.sales-info h3 {
+    color: #000;
+    font-size: 1.1em;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.sales-info h3::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #D4AF37;
+    margin: 8px 0;
+}
+
+.sales-info p {
+    margin: 4px 0;
+    font-size: 1em;
+    color: #000;
+}
+
+.sales-info p.current-bid {
+    color: #004d45;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.sales-info p.price {
+    font-weight: 700;
+}
+
+.sales-item:hover {
+    transform: translateY(-5px);
+    border-color: #D4AF37;
+    box-shadow: 0 5px 15px rgba(0, 77, 69, 0.15);
+}
+
+.sales-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.sales-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.sales-container::-webkit-scrollbar-thumb {
+    background: #004d45;
+    border-radius: 4px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-400px * 5 - 20px * 5));
+    }
+}
+
+@media (max-width: 1024px) {
+    .live-sales .container {
+        padding-left: 15px;
+        gap: 15px;
+    }
+    
+    .sales-item {
+        height: 120px;
+        width: 340px;
+    }
+    
+    .sales-item img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .sales-info {
+        padding: 10px;
+    }
+    
+    .sales-info h3 {
+        font-size: 1em;
+    }
+    
+    .sales-info p {
+        font-size: 0.9em;
+    }
+}
+
+.auction-timer {
+    display: flex;
+    gap: 4px;
+    margin: 4px 0 6px 0;
+}
+
+.timer-box {
+    background: #f5f5f5;
+    border-radius: 4px;
+    padding: 2px 4px;
+    min-width: 36px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.time-value {
+    display: block;
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.1;
+}
+
+.time-label {
+    display: block;
+    font-size: 0.6em;
+    color: #666;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+@media (max-width: 1024px) {
+    .sales-info {
+        padding: 8px 12px;
+        gap: 3px;
+    }
+
+    .auction-timer {
+        margin: 3px 0 5px 0;
+    }
+
+    .timer-box {
+        min-width: 32px;
+        padding: 2px 3px;
+    }
+
+    .time-value {
+        font-size: 0.8em;
+    }
+
+    .time-label {
+        font-size: 0.55em;
+    }
+
+    .sales-info h3 {
+        font-size: 0.9em;
+    }
+
+    .sales-info p.current-bid {
+        font-size: 0.8em;
+    }
+
+    .sales-info p.price {
+        font-size: 0.85em;
+    }
+}
+
+.bid-info-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: -1px;
+}
+
+.sales-info p.current-bid {
+    font-size: 0.85em;
+    margin: 0;
+    line-height: 1;
+}
+
+.sales-info p.price {
+    font-size: 0.9em;
+    margin: 0;
+    line-height: 1;
+}
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .live-sales .container {
+        flex-direction: column;
+        gap: 15px;
+        position: relative;
+    }
+
+    .live-sales-header {
+        flex: none;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .live-sales-header::after {
+        display: none; /* Remove vertical divider on mobile */
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .sales-container {
+        position: relative;
+        padding: 0 40px; /* Space for chevrons */
+    }
+
+    /* Chevron navigation */
+    .scroll-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background: rgba(0, 77, 69, 0.8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        cursor: pointer;
+        z-index: 2;
+        transition: all 0.3s ease;
+    }
+
+    
+
+    
+
+    /* Adjust box sizes */
+    .sales-item {
+        width: 300px; /* Smaller width for mobile */
+        height: 130px; /* Reduced height */
+    }
+
+    .sales-item img {
+        width: 130px;
+        height: 130px;
+    }
+
+    /* Adjust content spacing */
+    .sales-info {
+        padding: 8px 10px;
+        gap: 2px;
+    }
+
+    /* Reduce timer size */
+    .auction-timer {
+        gap: 3px;
+        margin: 2px 0 4px 0;
+    }
+
+    .timer-box {
+        min-width: 30px;
+        padding: 2px;
+    }
+
+    .time-value {
+        font-size: 0.75em;
+    }
+
+    .time-label {
+        font-size: 0.5em;
+    }
+
+    /* Adjust text sizes */
+    .sales-info h3 {
+        font-size: 0.85em;
+    }
+
+    .sales-info p.current-bid {
+        font-size: 0.75em;
+    }
+
+    .sales-info p.price {
+        font-size: 0.8em;
+    }
+
+    /* Enable touch scrolling */
+    .sales-scroll {
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none; /* Hide scrollbar Firefox */
+        -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
+    }
+
+    .sales-scroll::-webkit-scrollbar {
+        display: none; /* Hide scrollbar Chrome/Safari */
+    }
+
+    .sales-item {
+        scroll-snap-align: center;
+    }
+}

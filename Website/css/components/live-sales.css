@@ -1,0 +1,167 @@
+/* Carousel Container */
+.live-sales-container {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.sales-carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 30px;
+}
+
+/* Enhanced Box Styling */
+.live-sales-box {
+    flex: 0 0 calc(100% - 40px); /* Full width minus padding */
+    display: flex;
+    background: linear-gradient(145deg, #ffffff, #f9f9f9);
+    border: 2px solid #004d45;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.live-sales-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    border-color: #D4AF37;
+}
+
+/* Timer Styling Enhancement */
+.timer-box {
+    background: linear-gradient(145deg, #f5f5f5, #ffffff);
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 12px;
+    min-width: 70px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.time-value {
+    color: #004d45;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.time-label {
+    color: #666;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Watch Details Enhancement */
+.watch-name {
+    font-size: 1.6em;
+    color: #004d45;
+    margin: 15px 0;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.golden-separator {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    margin: 15px 0;
+}
+
+.bid-info {
+    padding: 10px;
+    background: rgba(0, 77, 69, 0.05);
+    border-radius: 12px;
+}
+
+.current-bid {
+    color: #004d45;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.bid-amount {
+    color: #D4AF37;
+    font-weight: 700;
+}
+
+.watch-price {
+    color: #666;
+    font-size: 1em;
+    margin-top: 8px;
+    display: block;
+}
+
+/* Navigation Dots */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #D4AF37;
+    transform: scale(1.2);
+}
+
+/* Left Side: Image */
+.sales-image {
+    flex: 0 0 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.sales-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right Side: Details */
+.sales-details {
+    flex: 0 0 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .live-sales-box {
+        flex-direction: column;
+    }
+
+    .sales-image,
+    .sales-details {
+        flex: 0 0 100%;
+    }
+
+    .sales-image {
+        height: 200px;
+    }
+
+    .timer-box {
+        min-width: 50px;
+        padding: 6px;
+    }
+
+    .time-value {
+        font-size: 1em;
+    }
+
+    .time-label {
+        font-size: 0.7em;
+    }
+} 

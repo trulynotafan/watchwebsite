@@ -1,0 +1,302 @@
+.top-bar {
+    background: rgba(0, 77, 69, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 8px 0;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #D4AF37;
+}
+
+.top-bar.scrolled {
+    background: rgba(0, 77, 69, 0.95);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.left-links, .right-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.top-bar-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar-item i {
+    font-size: 16px;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-toggle i.fa-chevron-down {
+    font-size: 12px;
+    transition: transform 0.3s;
+}
+
+.dropdown-toggle.active i.fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    min-width: 120px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s ease;
+    white-space: nowrap;
+}
+
+.dropdown-item span {
+    color: #333;
+    font-size: 0.9em;
+}
+
+.dropdown-item:hover {
+    background: #f5f5f5;
+    color: #004d45;
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.login-btn:hover {
+    color: #D4AF37;
+}
+
+.login-btn i {
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 768px) {
+    .top-bar {
+        padding: 8px 12px;
+        background: rgba(0, 77, 69, 0.9);
+    }
+
+    .left-links, .right-links {
+        gap: 12px;
+    }
+
+    .top-bar-item span {
+        display: none; /* Hide text, show only icons on mobile */
+    }
+
+    .dropdown-toggle {
+        padding: 4px 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .left-links {
+        gap: 8px;
+    }
+}
+
+/* Top bar responsiveness */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .left-links,
+    .right-links {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .top-bar-item {
+        margin: 5px 0;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        width: 150px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-10px);
+        background: white;
+        text-align: center;
+    }
+
+    .dropdown-menu.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .dropdown-item {
+        justify-content: center;
+        padding: 10px 16px;
+    }
+
+    .dropdown-item span {
+        display: inline-block;
+        color: #333;
+        font-size: 0.95em;
+    }
+}
+
+.language-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    min-width: 120px;
+}
+
+.language-option {
+    padding: 6px 16px;
+    color: #333;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+    display: block;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.language-option:hover {
+    background: #f5f5f5;
+    color: #004d45;
+}
+
+/* Add padding to body to prevent content from hiding under fixed topbar */
+body {
+    padding-top: 40px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-top: 65px;
+    }
+
+    .top-bar {
+        padding: 10px 0;
+    }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .topbar {
+        padding: 4px 0; /* Further reduced height */
+        background: linear-gradient(
+            90deg,
+            rgba(0, 77, 69, 0.7) 0%, /* Increased transparency */
+            rgba(212, 175, 55, 0.7) 100%
+        );
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .topbar-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .topbar-item {
+        font-size: 0.85em; /* Slightly smaller text */
+        padding: 4px 8px;
+    }
+
+    /* Align dropdown items */
+    .top-bar-right {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .dropdown-toggle {
+        padding: 4px 8px;
+    }
+
+    /* Adjust body padding for new topbar height */
+    body {
+        padding-top: 40px; /* Reduced padding */
+    }
+
+    /* Ensure dropdowns are properly aligned */
+    .dropdown-menu {
+        min-width: 110px;
+        transform: translateX(-50%) translateY(2px);
+    }
+
+    .dropdown-menu.show {
+        transform: translateX(-50%) translateY(4px);
+    }
+} 

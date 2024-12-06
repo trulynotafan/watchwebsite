@@ -1,0 +1,36 @@
+.separator-banner {
+    width: 100%;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-wrapper {
+    width: 100%;
+    height: 200px; /* Banner height */
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0, 41, 37, 0.1), rgba(212, 175, 55, 0.1));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .banner-wrapper {
+        height: 150px;
+    }
+} 

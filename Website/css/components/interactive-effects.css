@@ -1,0 +1,16 @@
+.cursor-effect {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 77, 69, 0.15) 0%, rgba(0, 77, 69, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: width 0.3s, height 0.3s;
+}
+
+body {
+    cursor: default;
+    overflow-x: hidden;
+} 

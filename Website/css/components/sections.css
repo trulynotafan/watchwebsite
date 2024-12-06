@@ -1,0 +1,288 @@
+/* Recent Watches */
+.watches-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.watch-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.watch-card:hover {
+    transform: translateY(-10px);
+}
+
+.watch-image {
+    position: relative;
+    height: 300px;
+}
+
+.watch-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.watch-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+}
+
+/* Explore Banner */
+.explore-banner {
+    background: linear-gradient(rgba(46,125,50,0.9), rgba(46,125,50,0.9)),
+                url('../assets/images/banner-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* Categories */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.category-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 250px;
+    cursor: pointer;
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Past Results */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.result-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.sold-price {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* About Section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* FAQ Section */
+.faq-item {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px 0;
+}
+
+.faq-answer {
+    padding: 0 20px 20px;
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* News Section */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.news-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.news-image {
+    height: 200px;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-date {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.read-more {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .watches-grid,
+    .categories-grid,
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .results-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .watches-grid,
+    .categories-grid,
+    .results-grid,
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sections responsiveness */
+@media (max-width: 768px) {
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+}
+
+/* Live Sales section */
+@media (max-width: 768px) {
+    .sales-carousel {
+        padding: 0 10px;
+    }
+
+    .sales-item {
+        flex: 0 0 100%;
+        margin: 0 5px;
+    }
+}
+
+/* Live Auction section */
+@media (max-width: 768px) {
+    .auction-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .auction-box {
+        margin-bottom: 20px;
+    }
+}
+
+/* About section */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-image,
+    .about-text {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+/* FAQ section */
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 0 15px;
+    }
+
+    .faq-box {
+        margin-bottom: 15px;
+    }
+}
+
+/* Latest News section */
+@media (max-width: 768px) {
+    .news-container {
+        flex-direction: column;
+    }
+
+    .blog-post.large,
+    .small-posts {
+        width: 100%;
+    }
+
+    .blog-post.large .blog-image {
+        height: 300px;
+    }
+} 

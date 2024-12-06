@@ -1,0 +1,156 @@
+.live-auction {
+    padding: 40px 24px;
+    background: linear-gradient(to bottom, #f5f5f5, #ffffff);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #2E7D32;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #2E7D32;
+}
+
+.auction-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.auction-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.auction-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #2E7D32, #4CAF50);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.auction-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(46, 125, 50, 0.2);
+}
+
+.auction-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.auction-item:hover .auction-image {
+    transform: scale(1.05);
+}
+
+.auction-details {
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.auction-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.current-bid {
+    color: #2E7D32;
+    font-weight: bold;
+    font-size: 1.4em;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bid-button {
+    background: #2E7D32;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.bid-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255,255,255,0.1);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: transform 0.5s ease;
+}
+
+.bid-button:hover::before {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.5);
+}
+
+.time-remaining {
+    font-size: 0.9em;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+/* Add loading shimmer effect for images */
+.image-loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+} 

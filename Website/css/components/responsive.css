@@ -1,0 +1,43 @@
+/* Better mobile responsiveness */
+@media (max-width: 768px) {
+    html {
+        font-size: 95%; /* Slightly smaller base font size for mobile */
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Improve touch targets */
+    button, 
+    .btn,
+    a {
+        min-height: 44px; /* Minimum touch target size */
+        min-width: 44px;
+    }
+
+    /* Better spacing on mobile */
+    section {
+        padding: 40px 0;
+    }
+
+    /* Improved mobile grid */
+    .grid {
+        gap: 15px;
+        padding: 10px;
+    }
+}
+
+/* Tablet optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+/* Larger screens */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+} 
